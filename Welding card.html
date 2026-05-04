@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation Demo</title>
+    <title>Wedding Invitation | Rahul & Sneha</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -78,18 +78,14 @@
         .nav-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         nav a { color: var(--gold); text-decoration: none; font-size: 11px; font-weight: 600; text-transform: uppercase; }
 
-        /* --- SECTIONS & GLASS CARDS --- */
+        /* --- GLASS CARDS --- */
         .glass-container {
             background: var(--glass); backdrop-filter: blur(15px);
             border: 1px solid var(--border); border-radius: 30px;
             padding: 40px 20px; max-width: 800px; margin: 30px auto; width: 90%;
             box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             position: relative; z-index: 2;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
-
-        .corner-flower { position: absolute; font-size: 30px; color: var(--gold); opacity: 0.6; }
-        .tl { top: 10px; left: 10px; } .tr { top: 10px; right: 10px; }
 
         .hero-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 80px; }
         .ganpati-main { width: 90px; margin-bottom: 15px; filter: drop-shadow(0 0 10px var(--gold)); }
@@ -102,43 +98,95 @@
         .date-row { display: flex; align-items: center; justify-content: center; gap: 15px; }
         .date { font-size: 36px; font-weight: 700; color: var(--gold); }
 
+        /* --- PROFESSIONAL EVENT CARDS --- */
+        .event-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 30px 15px;
+            border-radius: 20px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .event-card:hover {
+            background: rgba(212, 175, 55, 0.12);
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        .event-icon { font-size: 30px; margin-bottom: 15px; display: block; }
+        
+        .event-card h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 22px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .event-time {
+            font-weight: 600;
+            color: var(--gold) !important;
+            font-size: 13px !important;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .event-card p { font-size: 14px; color: #ddd; margin-bottom: 15px; }
+
+        .map-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .map-btn:hover {
+            background: var(--gold);
+            color: var(--green);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- COUPLE SECTION --- */
         .couple-grid { display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-top: 30px; width: 100%; }
         .couple-card { flex: 1; min-width: 250px; display: flex; flex-direction: column; align-items: center; }
-        .img-frame { border: 3px solid var(--gold); padding: 10px; border-radius: 50%; display: inline-block; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
-        .couple-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; display: block; }
-        .couple-name { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); margin-top: 15px; font-weight: 700; letter-spacing: 1px; }
-        .couple-info { font-size: 13px; color: #ddd; margin-top: 8px; line-height: 1.6; max-width: 200px; font-style: italic; }
-        .divider-heart { font-size: 35px; color: var(--gold); align-self: center; margin: 20px 0; }
-
+        .img-frame { border: 3px solid var(--gold); padding: 10px; border-radius: 50%; display: inline-block; }
+        .couple-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; }
+        .couple-name { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--gold); margin-top: 15px; }
+        
         .gold-heading { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--gold); margin-bottom: 25px; }
 
-        /* --- UPDATED BOTTLE GREEN FOOTER --- */
+        /* --- FOOTER --- */
         footer {
-            padding: 25px 20px; 
-            background-color: #00332c; 
+            padding: 40px 20px; 
+            background-color: #00241f; 
             border-top: 1px solid var(--border);
-            margin-top: 10px; 
-            position: relative; 
-            z-index: 2;
+            margin-top: 50px;
+            z-index: 2; position: relative;
         }
-        .edit-by { font-size: 10px; letter-spacing: 2px; color: #aaa; margin-bottom: 8px; text-transform: uppercase; }
-        
-        /* LOGO SIZE UPDATED HERE */
-        .my-logo { 
-            width: 80px; 
-            height: auto; 
-            margin-bottom: 10px; 
-            filter: drop-shadow(0 0 8px var(--gold)); 
-        }
-        
-        .my-name { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 15px; color: var(--gold); letter-spacing: 1px; }
-        .footer-numbers { margin-top: 8px; font-size: 12px; color: #ccc; display: flex; justify-content: center; gap: 12px; }
+        .my-logo { width: 80px; margin-bottom: 10px; filter: drop-shadow(0 0 8px var(--gold)); }
+        .my-name { font-weight: 600; font-size: 15px; color: var(--gold); letter-spacing: 1px; }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
         .contact-list { list-style: none; margin-top: 15px; }
-        .contact-list li { margin: 10px 0; font-size: 16px; }
         .contact-list a { color: var(--gold); text-decoration: none; font-weight: 600; }
     </style>
 </head>
@@ -148,10 +196,8 @@
 
     <div id="overlay" onclick="openCard()">
         <div class="envelope-circle">
-            <span class="corner-flower tl">🌸</span>
-            <span class="corner-flower tr">🌸</span>
             <div class="ganpati-box">
-                <img src="ganesh.jpg" alt="Ganpati Bappa">
+                <img src="ganesh.jpg" alt="Ganpati" onerror="this.src='https://img.icons8.com/color/96/ganesh.png'">
             </div>
             <h2 class="overlay-names">Rahul & Sneha</h2>
             <div class="gold-line"></div>
@@ -164,15 +210,14 @@
             <a href="#home">Home</a>
             <a href="#couple">Couple</a>
             <a href="#events">Events</a>
-            <a href="#location">Venue</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <section class="hero-section" id="home">
         <div class="glass-container reveal">
-            <img src="ganesh.jpg" class="ganpati-main" alt="Ganpati">
-            <p style="letter-spacing: 5px; font-size: 12px; font-weight: 600;">SHUBH VIVAHA</p>
+            <img src="ganesh.jpg" class="ganpati-main" alt="Ganpati" onerror="this.src='https://img.icons8.com/color/96/ganesh.png'">
+            <p style="letter-spacing: 5px; font-size: 12px;">SHUBH VIVAHA</p>
             <h1 class="hero-title">Rahul & Sneha</h1>
             <div class="wedding-date-box">
                 <div class="date-row">
@@ -184,56 +229,68 @@
         </div>
     </section>
 
-    <section class="section" id="couple">
+    <section id="couple">
         <div class="glass-container reveal">
             <h2 class="gold-heading">Meet The Couple</h2>
             <div class="couple-grid">
                 <div class="couple-card">
-                    <div class="img-frame"><img src="boy.jpg" class="couple-img" alt="Groom"></div>
+                    <div class="img-frame"><img src="boy.jpg" class="couple-img" alt="Groom" onerror="this.src='https://via.placeholder.com/150'"></div>
                     <h3 class="couple-name">RAHUL</h3>
-                    <p class="couple-info">S/o Mr. & Mrs. Pawar. <br> A kind heart looking forward to a new journey.</p>
+                    <p style="font-style: italic; font-size: 13px; color: #ccc;">S/o Mr. & Mrs. Pawar</p>
                 </div>
-
-                <div class="divider-heart">❤️</div>
-
+                <div style="font-size: 35px; color: var(--gold); align-self: center; margin: 20px 0;">❤️</div>
                 <div class="couple-card">
-                    <div class="img-frame"><img src="girl.jpg" class="couple-img" alt="Bride"></div>
+                    <div class="img-frame"><img src="girl.jpg" class="couple-img" alt="Bride" onerror="this.src='https://via.placeholder.com/150'"></div>
                     <h3 class="couple-name">SNEHA</h3>
-                    <p class="couple-info">D/o Mr. & Mrs. Shinde. <br> Bringing grace and love into this beautiful union.</p>
+                    <p style="font-style: italic; font-size: 13px; color: #ccc;">D/o Mr. & Mrs. Shinde</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="events">
+    <section id="events">
         <div class="glass-container reveal">
             <h2 class="gold-heading">Wedding Rituals</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; width: 100%;">
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px;">💛<h4>Haldi</h4><p>13 Dec</p></div>
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px;">🎶<h4>Sangeet</h4><p>14 Dec</p></div>
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px;">💍<h4>Wedding</h4><p>15 Dec</p></div>
+            <div class="event-grid">
+                <div class="event-card">
+                    <span class="event-icon">💛</span>
+                    <h4>Haldi Ceremony</h4>
+                    <span class="event-time">13 Dec 2026 | 10:00 AM</span>
+                    <p>At Residence, Nashik</p>
+                    <a href="यहाँ_मैप_लिंक_डालें" target="_blank" class="map-btn">📍 View Location</a>
+                </div>
+                <div class="event-card">
+                    <span class="event-icon">🎶</span>
+                    <h4>Sangeet Night</h4>
+                    <span class="event-time">14 Dec 2026 | 06:00 PM</span>
+                    <p>Grand Palace Banquet</p>
+                    <a href="यहाँ_मैप_लिंक_डालें" target="_blank" class="map-btn">📍 View Location</a>
+                </div>
+                <div class="event-card">
+                    <span class="event-icon">💍</span>
+                    <h4>The Wedding</h4>
+                    <span class="event-time">15 Dec 2026 | 12:35 PM</span>
+                    <p>Mangal Karyalaya, Nashik</p>
+                    <a href="https://goo.gl/maps/example" target="_blank" class="map-btn">📍 View Location</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="contact">
+    <section id="contact">
         <div class="glass-container reveal">
             <h2 class="gold-heading">Contact Us</h2>
             <ul class="contact-list">
-                <li>Rahul: <a href="tel:7620436756">7620436756</a></li>
+                <li style="margin-bottom: 10px;">Rahul: <a href="tel:7620436756">7620436756</a></li>
                 <li>Sneha: <a href="tel:9850571697">9850571697</a></li>
-                <li>Support: <a href="tel:9130491639">9130491639</a></li>
             </ul>
         </div>
     </section>
 
     <footer>
-        <div class="edit-by">Edited By</div>
-        <img src="logo.png" alt="MG LOGO" class="my-logo" onerror="this.src='https://img.icons8.com/color/96/design.png'">
-        <div class="my-name">Mr.YASH SANTOSH KADVE</div>
-        <div class="footer-numbers">
-            <span>xxxxxxxxxx</span> | <span>xxxxxxxxxx</span> | <span>xxxxxxxxxx</span>
-        </div>
+        <div style="font-size: 10px; color: #aaa; margin-bottom: 8px;">EDITED BY</div>
+        <img src="logo.png" alt="Logo" class="my-logo" onerror="this.src='https://img.icons8.com/color/96/design.png'">
+        <div class="my-name">Mr. YASH SANTOSH KADVE</div>
     </footer>
 
     <script>
@@ -247,7 +304,6 @@
                 flower.style.left = Math.random() * 100 + 'vw';
                 flower.style.animationDuration = (Math.random() * 8 + 7) + 's';
                 flower.style.animationDelay = (Math.random() * 5) + 's';
-                flower.style.fontSize = (Math.random() * 15 + 15) + 'px';
                 container.appendChild(flower);
             }
         }
@@ -262,9 +318,9 @@
             reveals.forEach(el => {
                 const windowHeight = window.innerHeight;
                 const elementTop = el.getBoundingClientRect().top;
-                const elementTop = el.getBoundingClientRect().top;
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) { el.classList.add('active'); }
+                if (elementTop < windowHeight - 100) { 
+                    el.classList.add('active'); 
+                }
             });
         }
 
@@ -273,4 +329,3 @@
     </script>
 </body>
 </html>
-
